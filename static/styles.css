@@ -1,0 +1,37 @@
+.btn-delete {
+  background-color: red;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: darkred;
+}
+
+.btn-delete[disabled] {
+  background-color: grey;
+}
+
+.btn-delete[disabled]:hover {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.btn-delete-text {
+  color: red;
+}
+
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.delete-course.btn-primary:active {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.delete-course.btn-primary:focus {
+  box-shadow: none;
+}
