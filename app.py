@@ -15,14 +15,12 @@ class entryes(db.Model):
     def __repr__(self):
         return '<entry %r>' % self.entry
     
-
-# так как скрипт предназначен для одного человека, 
-# то записи не сортируются по их владельцу
+    
 @app.route('/entry', methods=['GET', 'POST'])
 def my_entry():
     if request.method == 'POST':
 
-        # список записей
+        # запись
         content_entry = request.form['entry']
         entry = entryes.query.first()
         entry.entry = content_entry
@@ -33,7 +31,7 @@ def my_entry():
         return render_template('bots.html', entry=entry)
     
     else:
-        # список записей
+        # запись
         entry = entryes.query.first()
         return render_template('bots.html', entry=entry)
 
